@@ -1,0 +1,4 @@
+-Create database .sql
+-Add MVC structure to Java project ✔
+-Develop User model class in Java
+-Secure connection between program and database
