@@ -1,4 +1,8 @@
--Create database .sql
+-Ask any questions about the project to teachers
+
+-Create database .sql ✔ (Maybe)
 -Add MVC structure to Java project ✔
--Develop User model class in Java
--Secure connection between program and database
+-Plan the platform design/functionality
+-Review the factoring docs
+-Begin platform design
+-Begin factoring implementation
