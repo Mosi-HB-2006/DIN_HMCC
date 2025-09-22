@@ -6,19 +6,19 @@ import java.time.*;
 public class User implements Serializable {
     private String username;
     private String password;
-    private LocalDate birthDate;
+    private String birthDate;
     private String desc;
     private Gender gender;
 
     public User() {
         this.username = "";
         this.password = "";
-        this.birthDate = LocalDate.now();
+        this.birthDate = "";
         this.desc = "";
         this.gender = Gender.OTHER;
     }
 
-    public User(String username, String password, LocalDate birthDate, String desc, Gender gender) {
+    public User(String username, String password, String birthDate, String desc, Gender gender) {
         this.username = username;
         this.password = password;
         this.birthDate = birthDate;
@@ -42,11 +42,11 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public LocalDate getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
