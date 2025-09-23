@@ -25,7 +25,7 @@ public class LoginWindowController implements Initializable {
         String password = passwordField.getText();
         
         Controller cont = new Controller();
-        System.out.println(cont.loginDB(username, password).getUsername());
+        System.out.println(cont.loginFich(username, password).getUsername());
     }
     
     @Override
