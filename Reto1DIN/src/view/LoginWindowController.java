@@ -6,7 +6,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 /**
  * @author Jago128
@@ -14,14 +15,17 @@ import javafx.scene.control.Label;
 public class LoginWindowController implements Initializable {
 
     @FXML
-    private Label label;
-    private String username;
-    private String password;
+    private TextField usernameField;
+    @FXML
+    private PasswordField passwordField;
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+        
         Controller cont = new Controller();
-        cont.loginDB(username, password);
+        System.out.println(cont.loginDB(username, password).getUsername());
     }
     
     @Override

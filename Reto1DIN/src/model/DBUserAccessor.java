@@ -24,7 +24,7 @@ public class DBUserAccessor implements DataAccessible {
      * Constructor to handle database information
      */
     public DBUserAccessor() {
-        this.configFile = ResourceBundle.getBundle("modelo.configClase");
+        this.configFile = ResourceBundle.getBundle("configClase");
         this.driverBD = this.configFile.getString("Driver");
         this.urlBD = this.configFile.getString("Conn");
         this.userBD = this.configFile.getString("DBUser");
