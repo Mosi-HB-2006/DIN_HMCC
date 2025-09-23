@@ -1,4 +1,4 @@
-package userInterface;
+package main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,8 +14,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-
+        Parent root = FXMLLoader.load(getClass().getResource("/view/LoginWindow.fxml"));
+        
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
