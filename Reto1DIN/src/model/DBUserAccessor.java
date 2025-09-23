@@ -3,6 +3,9 @@ package model;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * @author Jago128
+ */
 public class DBUserAccessor implements DataAccessible {
 
     private Connection con;
@@ -17,6 +20,9 @@ public class DBUserAccessor implements DataAccessible {
 
     final String SQLUSER = "SELECT * FROM USER WHERE USERNAME=? AND PASSWORD=?";
 
+    /**
+     * Constructor to handle database information
+     */
     public DBUserAccessor() {
         this.configFile = ResourceBundle.getBundle("modelo.configClase");
         this.driverBD = this.configFile.getString("Driver");
@@ -25,6 +31,9 @@ public class DBUserAccessor implements DataAccessible {
         this.passwordBD = this.configFile.getString("DBPass");
     }
 
+    /**
+     * Method to open connection with database
+     */
     private void openConnection() {
         try {
             con = DriverManager.getConnection(urlBD, this.userBD, this.passwordBD);
@@ -36,6 +45,11 @@ public class DBUserAccessor implements DataAccessible {
         }
     }
 
+    /**
+     * @param username The username of the saved person
+     * @param password The password of the saved person
+     * @return Method to check if the data is in the Database.
+     */
     @Override
     public User accessData(String username, String password) {
         User user = null;

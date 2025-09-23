@@ -5,9 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import model.Gender;
-import model.User;
 
+
+/**
+ * @author Jago128
+ */
 public class Main extends Application {    
 
     @Override
@@ -19,6 +21,10 @@ public class Main extends Application {
         stage.show();
     }
 
+    /**
+     * Main method
+     * @param args
+     */
     public static void main(String[] args) {
         launch(args);
     }

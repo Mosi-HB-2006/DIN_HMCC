@@ -3,6 +3,10 @@ package model;
 import java.io.*;
 import java.time.*;
 
+/**
+ *
+ * @author Usuario
+ */
 public class User implements Serializable {
     private String username;
     private String password;
@@ -10,6 +14,9 @@ public class User implements Serializable {
     private String desc;
     private Gender gender;
 
+    /**
+     * Empty constructor
+     */
     public User() {
         this.username = "";
         this.password = "";
@@ -18,6 +25,14 @@ public class User implements Serializable {
         this.gender = Gender.OTHER;
     }
 
+    /**
+     * Parametrized constructor
+     * @param username
+     * @param password
+     * @param birthDate
+     * @param desc
+     * @param gender
+     */
     public User(String username, String password, String birthDate, String desc, Gender gender) {
         this.username = username;
         this.password = password;
