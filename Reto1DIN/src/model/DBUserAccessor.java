@@ -37,7 +37,7 @@ public class DBUserAccessor implements DataAccessible {
     }
 
     @Override
-    public User accessDataFile(String username, String password) {
+    public User accessData(String username, String password) {
         User user = null;
 
         this.openConnection();

@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 public class FileUserDataAccessor implements DataAccessible {
 
     @Override
-    public User accessDataFile(String username, String password) {
+    public User accessData(String username, String password) {
         File fich = new File("usuarios.obj");
         boolean endFile = false;
         User finalUser = null;
@@ -19,7 +19,6 @@ public class FileUserDataAccessor implements DataAccessible {
                 try {
                     do {
                         User user = (User) ois.readObject();
-
                         if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                             finalUser = user;
                             endFile = true;

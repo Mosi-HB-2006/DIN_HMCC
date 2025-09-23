@@ -6,6 +6,6 @@ public class UserDataWindowController {
     DataAccessible dao = new FileUserDataAccessor();
     
     public User accessDataFile(String username, String password)  {
-        return dao.accessDataFile(username, password);
+        return dao.accessData(username, password);
     }
 }
