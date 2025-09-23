@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
 /**
- * @author Usuario
+ * @author Mosi
  */
 public class FileUserDataAccessor implements DataAccessible {
 
