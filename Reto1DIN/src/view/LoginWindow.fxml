@@ -18,5 +18,6 @@
          </font></Button>
       <PasswordField fx:id="passwordField" layoutX="43.0" layoutY="163.0" prefHeight="27.0" prefWidth="314.0" promptText="Password" />
       <TextField fx:id="usernameField" layoutX="43.0" layoutY="114.0" prefHeight="27.0" prefWidth="314.0" promptText="Username" style="-fx-border-radius: 0;" />
+      <Label fx:id="errorText" alignment="CENTER" contentDisplay="CENTER" layoutX="45.0" layoutY="200.0" prefHeight="18.0" prefWidth="314.0" textFill="RED" />
     </children>
 </AnchorPane>

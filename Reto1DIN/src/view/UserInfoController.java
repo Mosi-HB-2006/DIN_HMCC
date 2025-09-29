@@ -6,9 +6,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import model.User;
 
 public class UserInfoController implements Initializable {
 
+    private User user;
     @FXML
     private Label label;
 
@@ -21,5 +23,10 @@ public class UserInfoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
+    }
+    
+    public void setUser(User newUser){
+        this.user = newUser;
+        System.out.println(user.toString());
     }
 }
