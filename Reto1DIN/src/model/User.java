@@ -1,7 +1,7 @@
 package model;
 
-import java.io.*;
-import java.time.*;
+import java.io.Serializable;
+
 
 /**
  *
@@ -26,7 +26,8 @@ public class User implements Serializable {
     }
 
     /**
-     * Parametrized constructor
+     * constructor for the user
+     * 
      * @param username
      * @param password
      * @param birthDate

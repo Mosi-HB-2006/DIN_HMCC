@@ -29,6 +29,12 @@ public class LoginWindowController implements Initializable {
     @FXML
     private Label errorText;
 
+    /**
+     * When button is clicked, form data is extracted and verified in the
+     * database and in the files
+     *
+     * @param event which is triggered by pressing the login button
+     */
     @FXML
     private void handleButtonAction(ActionEvent event) {
         User user = null;
@@ -52,27 +58,40 @@ public class LoginWindowController implements Initializable {
         }
     }
 
+    /**
+     * Initializes the controller class. Called automatically after the FXML
+     * file has been loaded.
+     *
+     * @param url location used to resolve relative paths
+     * @param rb resources used to localize the root object
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
     }
-    
+
+    /**
+     * Opens a new window with the given FXML file and passes the user information to it. 
+     * Closes the current window after the new one is displayed
+     *
+     * @param window the name of the window to open 
+     * @param event the event that triggered the window change 
+     * @param user the user data to be passed to the next controller
+     */
     public void openWindow(String window, Event event, User user) {
         Stage stage = new Stage();
         Parent root;
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/UserInfoWindow.fxml"));
             root = loader.load();
-            
+
             UserInfoController contInfo = loader.getController();
             contInfo.setUser(user);
-            
+
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-            
-            
-            
+
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.close();
         } catch (IOException ex) {

@@ -20,7 +20,6 @@ public class FileUserDataAccessor implements DataAccessible {
     @Override
     public User accessData(String username, String password) {
         File fich = new File("usuarios.dat");
-        boolean endFile = false;
         User finalUser = null;
 
         if (fich.exists()) {
@@ -32,6 +31,11 @@ public class FileUserDataAccessor implements DataAccessible {
         return finalUser;
     }
 
+    /**
+     * Creates a default file with sample users if none exists.
+     *
+     * @param fich the file where the sample user data will be saved
+     */
     public static void fillData(File fich) {
         User u1 = new User("user1", "user1", "17/10/2006", "New Description for User 1", Gender.MALE);
         User u2 = new User("user2", "user2", "17/10/2006", "New Description for User 2", Gender.FEMALE);
@@ -50,10 +54,18 @@ public class FileUserDataAccessor implements DataAccessible {
         }
     }
 
+    /**
+     * Verifies if the given username and password match a user stored in the file.
+     * 
+     * @param username the username to verify
+     * @param password the password to verify
+     * @param fich the file containing user data
+     * @return the user if found, or null if no match exists
+     */
     public static User verifyUser(String username, String password, File fich) {
         boolean endFile = false;
         User endUser = null;
-        
+
         try {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fich));
             try {
@@ -70,7 +82,7 @@ public class FileUserDataAccessor implements DataAccessible {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         return endUser;
     }
 }
