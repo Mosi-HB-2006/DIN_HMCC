@@ -62,13 +62,17 @@ public class LoginWindowController implements Initializable {
         Stage stage = new Stage();
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("UserInfoWindow.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("UserInfoWindow.fxml"));
+            root = loader.load();
+            
+            UserInfoController contInfo = loader.getController();
+            contInfo.setUser(user);
+            
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
             
-            UserInfoController contInfo = new UserInfoController();
-            contInfo.setUser(user);
+            
             
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.close();
