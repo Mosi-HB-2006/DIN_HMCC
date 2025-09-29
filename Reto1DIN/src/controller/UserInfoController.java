@@ -1,4 +1,4 @@
-package view;
+package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -31,8 +31,7 @@ public class UserInfoController implements Initializable {
     }
     
     public void updateLabels(){
-        System.out.println(iconLabel.getText());
-        iconLabel.setText(String.valueOf(user.getUsername().charAt(0)));
+        iconLabel.setText(String.valueOf(user.getUsername().charAt(0)).toUpperCase());
         nameLabel.setText(user.getUsername());
         dateLabel.setText(user.getBirthDate());
         descLabel.setText(user.getDesc());

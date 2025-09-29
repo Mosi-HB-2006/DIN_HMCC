@@ -1,6 +1,5 @@
-package view;
+package controller;
 
-import controller.Controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -62,7 +61,7 @@ public class LoginWindowController implements Initializable {
         Stage stage = new Stage();
         Parent root;
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("UserInfoWindow.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/UserInfoWindow.fxml"));
             root = loader.load();
             
             UserInfoController contInfo = loader.getController();
