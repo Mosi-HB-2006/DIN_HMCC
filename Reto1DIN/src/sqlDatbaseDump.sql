@@ -38,7 +38,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('test','test','2006-10-17','test','MALE');
+INSERT INTO `user` VALUES ('user4','user4','2006-10-17','General description for User no. 4!','MALE'),('user5','user5','2006-10-17','General description for User no. 5!','FEMALE'),('user6','user6','2006-10-17','General description for User no. 6!','NON_BINARY');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-09-29 10:43:27
+-- Dump completed on 2025-09-29 19:38:24

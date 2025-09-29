@@ -9,4 +9,6 @@ CREATE TABLE USER (
     GENDER ENUM ("MALE", "FEMALE", "NON_BINARY", "OTHER")
 );
 
-INSERT INTO USER VALUES ("test", "test", "2006-10-17", "test", "MALE");
+INSERT INTO USER VALUES ("user4", "user4", "2006-10-17", "General description for User no. 4!", "MALE");
+INSERT INTO USER VALUES ("user5", "user5", "2006-10-17", "General description for User no. 5!", "FEMALE");
+INSERT INTO USER VALUES ("user6", "user6", "2006-10-17", "General description for User no. 6!", "NON_BINARY");
